@@ -17,5 +17,4 @@ yarn dev
 
 # build for production with minification
 yarn build
-
 ```
