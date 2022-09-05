@@ -6,8 +6,8 @@
 
 body {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100vh;
     background-color: rgb(24, 22, 35);
@@ -81,10 +81,19 @@ body {
 @media (max-width: 860px) {
     body {
         flex-direction: column;
+        justify-content: normal;
     }
 
     .stats-component {
         flex-direction: column;
+    }
+
+    .wallet-component__wallet {
+        margin-top: 5px;
+    }
+
+    .stat-component {
+        margin-top: 15px;
     }
 
     .wallet-component__wallet {
