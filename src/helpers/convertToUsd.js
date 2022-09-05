@@ -1,3 +1,3 @@
 export const convertToUsd = (value, price) => {
-    return parseInt(value * price).toFixed(2)
+    return parseFloat(value * price).toFixed(2)
 }
