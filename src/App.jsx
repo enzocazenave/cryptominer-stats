@@ -1,5 +1,9 @@
+import { StatsPage } from './page/StatsPage';
+
 export const App = () => {
     return (
-        <div>App</div>
+        <>
+            <StatsPage />
+        </>
     )
 }
