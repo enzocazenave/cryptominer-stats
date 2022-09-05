@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
@@ -67,6 +68,7 @@ body {
     border-left-color: rgb(136, 218, 9);
     height: 50px;
     width: 50px;
+    margin-top: 50%;
 }
 
 @keyframes spin {
@@ -78,7 +80,11 @@ body {
     }
 }
 
-@media (max-width: 860px) {
+.loading {
+    justify-content: center;
+}
+
+@media (max-width: 1013px) {
     body {
         flex-direction: column;
         justify-content: normal;

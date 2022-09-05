@@ -8,7 +8,8 @@ export const StatsPage = () => {
 
     useEffect(() => { startLoadingData() }, []);
     
-    if (loading) return <div className="spinner-loader"></div>;
+    if (loading) return <body className='loading'><div className="spinner-loader"></div></body>;
+    
 
     return (
         <>
