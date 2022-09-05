@@ -88,21 +88,22 @@ body {
     body {
         flex-direction: column;
         justify-content: normal;
+        align-items: center;
     }
 
     .stats-component {
         flex-direction: column;
+        padding: 10px;
+        margin-bottom: 20px;
     }
 
     .wallet-component__wallet {
-        margin-top: 5px;
+        font-size: 13px;
+        margin: 10px 10px 0 10px;
     }
 
     .stat-component {
         margin-top: 15px;
-    }
-
-    .wallet-component__wallet {
-        font-size: 15px;
+        width: auto;
     }
 }
