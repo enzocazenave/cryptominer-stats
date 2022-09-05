@@ -1,7 +1,7 @@
 export const convertData = (stat,int64) => {
     var result = 0;
 
-    if (stat === 'balance' || stat === 'paid' || stat === 'reward24') {
+    if (stat === 'balance' || stat === 'paid' || stat === 'reward24' || stat === 'payout') {
         result = (int64 / 1000000000).toFixed(6);
     } else if (stat === 'currentHashrate' || stat === 'hashrate') {
         result = ((int64 / 1000000).toFixed(2)) + ' MH/s';

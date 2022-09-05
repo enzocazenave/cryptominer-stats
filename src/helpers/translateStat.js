@@ -5,5 +5,6 @@ export const translateStat = (stat) => {
     else if (stat === 'currentHashrate') return 'Tasa de hash (Actual)';
     else if (stat === 'hashrate') return 'Tasa de hash (Promedio)';
     else if (stat === 'lastShare') return 'Última acción';
+    else if (stat === 'payout') return 'Pago configurado en';
 
 }

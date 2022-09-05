@@ -12,12 +12,15 @@ export const useUiStore = () => {
     const startLoadingData = async() => {
         const { data } = await statsApi.get();
         const { data: ethdata } = await ethApi.get('/');
+
         const { stats, currentHashrate, hashrate } = data;
+
         const reward24 = data['24hreward'];
-        const price = ethdata[0].price_usd;
-        
+        const price = parseFloat(ethdata[0].price_usd);
+        const payout = data.config.minPayout;
+
         dispatch(setData({
-           ...stats, currentHashrate, hashrate, reward24, wallet, price
+           ...stats, currentHashrate, hashrate, reward24, wallet, price, payout
         }));
     }
 

@@ -13,6 +13,7 @@ export const uiSlice = createSlice({
             currentHashrate: 0,
             hashrate: 0,
             reward24: 0,  
+            payout: 0,
         }
     },
     reducers: {
@@ -23,6 +24,7 @@ export const uiSlice = createSlice({
             state.data.currentHashrate = payload.currentHashrate;
             state.data.hashrate = payload.hashrate;
             state.data.reward24 = payload.reward24;
+            state.data.payout = payload.payout;
             state.wallet = payload.wallet;
             state.price = payload.price;
             state.loading = false;
