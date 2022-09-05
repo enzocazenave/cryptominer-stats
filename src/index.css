@@ -35,10 +35,10 @@ body {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 20px;
     padding: 15px;
-    row-gap: 10px;
+    row-gap: 12px;
 }
 
 .stat-component__value {
