@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { statsApi } from '../api';
+import { statsApi, ethApi } from '../api';
 import { getEnvVariables } from '../helpers/getEnvVariables';
 import { setData } from '../store';
 
@@ -11,6 +11,13 @@ export const useUiStore = () => {
 
     const startLoadingData = async() => {
         const { data } = await statsApi.get();
+        const { ethData } = await ethApi.get('/', {
+            headers: {
+                'Accepts': 'application/json',
+                'X-CMC_PRO_API_KEY': '567181cf-70bd-42fc-a6c0-738e3d260a97'
+            }
+        });
+        console.log(ethData);
         const { stats, currentHashrate, hashrate } = data;
         const reward24 = data['24hreward'];
         

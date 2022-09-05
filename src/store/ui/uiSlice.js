@@ -5,6 +5,7 @@ export const uiSlice = createSlice({
     initialState: {
         loading: true,
         wallet: null,
+        price: 0,
         data: {
             balance: 0,
             paid: 0,
@@ -23,6 +24,7 @@ export const uiSlice = createSlice({
             state.data.hashrate = payload.hashrate;
             state.data.reward24 = payload.reward24;
             state.wallet = payload.wallet;
+            state.price = payload.price;
             state.loading = false;
         }
     }
