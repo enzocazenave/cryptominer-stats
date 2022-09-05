@@ -4,12 +4,13 @@ export const uiSlice = createSlice({
     name: 'ui',
     initialState: {
         loading: true,
+        wallet: null,
         data: {
             balance: 0,
             paid: 0,
             lastShare: 0,
-            currentHr: 0,
-            hr: 0,
+            currentHashrate: 0,
+            hashrate: 0,
             reward24: 0,  
         }
     },
@@ -18,9 +19,10 @@ export const uiSlice = createSlice({
             state.data.balance = payload.balance;
             state.data.paid = payload.paid;
             state.data.lastShare = payload.lastShare;
-            state.data.currentHr = payload.currentHr;
-            state.data.hr = payload.hr;
+            state.data.currentHashrate = payload.currentHashrate;
+            state.data.hashrate = payload.hashrate;
             state.data.reward24 = payload.reward24;
+            state.wallet = payload.wallet;
             state.loading = false;
         }
     }
