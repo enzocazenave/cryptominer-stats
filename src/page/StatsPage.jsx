@@ -11,6 +11,10 @@ export const StatsPage = () => {
     if (loading) return <div className="spinner-loader"></div>;
 
     return (
-        <StatsComponent stats={ stats } />
+        <>
+            <WalletComponent wallet={ wallet } />
+            <StatsComponent stats={ stats } />
+        </>
+        
     )
 }

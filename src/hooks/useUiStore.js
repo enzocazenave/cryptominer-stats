@@ -7,7 +7,7 @@ export const useUiStore = () => {
 
     const dispatch = useDispatch();
     const { data: stats, loading } = useSelector(state => state.ui);
-    const { VITE_WALLET_ID: wallet } = getEnvVariables();
+    const { WALLET_ID: wallet } = getEnvVariables();
 
     const startLoadingData = async() => {
         const { data } = await statsApi.get();
