@@ -4,7 +4,7 @@ import { useUiStore } from '../hooks/';
 
 export const StatsPage = () => {
 
-    const { stats, wallet, loading, startLoadingData } = useUiStore();
+    const { stats, wallet, loading, price, startLoadingData } = useUiStore();
 
     useEffect(() => { startLoadingData() }, []);
     
@@ -13,7 +13,7 @@ export const StatsPage = () => {
     return (
         <>
             <WalletComponent wallet={ wallet } />
-            <StatsComponent stats={ stats } />
+            <StatsComponent stats={ stats } price={ price } />
         </>
         
     )

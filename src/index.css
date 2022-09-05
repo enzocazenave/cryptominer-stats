@@ -47,6 +47,12 @@ body {
     text-align: center
 }
 
+.stat-component__convertion {
+    color: rgb(134, 132, 132);
+    font-size: 14px;
+    text-align: center
+}
+
 .stat-component__title {
     color: rgb(136, 218, 9);
     font-weight: 600;
