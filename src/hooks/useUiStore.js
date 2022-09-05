@@ -11,13 +11,13 @@ export const useUiStore = () => {
 
     const startLoadingData = async() => {
         const { data } = await statsApi.get();
-        const { ethData } = await ethApi.get('/', {
+        const { data: ethdata } = await ethApi.get('/', {
             headers: {
                 'Accepts': 'application/json',
                 'X-CMC_PRO_API_KEY': '567181cf-70bd-42fc-a6c0-738e3d260a97'
             }
         });
-        console.log(ethData);
+        console.log(ethdata);
         const { stats, currentHashrate, hashrate } = data;
         const reward24 = data['24hreward'];
         
