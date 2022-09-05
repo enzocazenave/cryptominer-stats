@@ -12,7 +12,7 @@ It is a panel where you can see the stats of your cryptocurrency miner.
     WALLET_ID: '',
 }
 
-# add your server miner of 2miners
+# add your server miner of 2miners in src/helpers/getEnvVariables.js
 {
     API_URL: '',
     API_ETH_URL: 'https://currencies.2miners.com/api/v1/ticker/ethereum/',
