@@ -15,9 +15,15 @@ export const useUiStore = () => {
 
         const { stats, currentHashrate, hashrate } = data;
 
-        const reward24 = data['24hreward'];
+        const reward24 = data['24hreward'] ;
         const price = parseFloat(ethdata[0].price_usd);
         const payout = data.config.minPayout;
+
+        if (!stats.balance && !stats.paid) {
+            return dispatch(setData({
+                stats: { balance: 0, paid: 0, lastShare: stats.lastShare }, currentHashrate, hashrate, reward24, wallet, price, payout
+            }));
+        } 
 
         dispatch(setData({
            ...stats, currentHashrate, hashrate, reward24, wallet, price, payout
